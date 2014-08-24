@@ -1,0 +1,70 @@
+---
+title       : BMI Calculator
+subtitle    : A simple online calculator
+author      : Paul R
+job         : Data Scientist
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, shiny, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Slide 1 - Introduction
+
+This Shiny app is designed to calculate a person's BMI ("Body Mass Index").
+
+In addition to just calculating the BMI number this app then displays the person's BMI on a chart so that the BMI classification can be seen in context.
+
+--- .class #id 
+
+## Slide 2 - BMI Description
+
+BMI is a measure of a person's relative weight based on the person's mass and weight.
+
+For more information about BMI (including its limitations) the following is a good resource:-
+http://en.wikipedia.org/wiki/Body_mass_index
+
+--- .class #id 
+
+## Slide 3 - BMI Calculation
+
+This is a sample BMI calculation as used in this app:-
+
+```{r}
+# Inputs
+weight <- 90    # 90kg
+height <- 1.9   # 1.9m
+
+# Calulation
+BMI <- weight / height^2
+
+# Output
+BMI
+```
+
+--- .class #id 
+
+## Slide 4 - Future Improvements
+
+The following are improvements which could be made in future releases:-
+
+1. A database of all users of the app could be kept so that new users of the app can compare themselves to previous users.
+
+2. National health statistic databases could be included so that users could find out how they compare to the population as a whole.
+
+3. Currently the app only accepts metric measures (metres and kilograms). Allowance could be made for other units of measure so as to suit as many people as possible.
+
+--- .class #id 
+
+## Slide 5 - References
+
+The following sites were used in the creation of this app:-
+
+1. http://sas-and-r.blogspot.ie/2010/04/example-731-contour-plot-of-bmi-by.html
+    - This provided the code for the base BMI chart.
+    - Note that the interactive placing of the person's BMI on this chart was coded by myself.
+
+2. http://en.wikipedia.org/wiki/Body_mass_index
+    - This site was used for general information.
